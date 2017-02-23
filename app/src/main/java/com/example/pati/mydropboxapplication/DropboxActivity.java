@@ -39,6 +39,7 @@ public abstract class DropboxActivity extends AppCompatActivity {
         loadData();
     }
 
+
     protected abstract void loadData();
 
     protected boolean hasToken() {

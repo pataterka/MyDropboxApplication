@@ -6,5 +6,6 @@
     <string name="view_files">View Files</string>
     <string name="login_with_dropbox">Login with Dropbox</string>
     <string name="hello_text">Welcome to Dropbox</string>
+    <string name="logout">Log Out</string>
 
 </resources>

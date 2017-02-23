@@ -3,7 +3,7 @@ package com.example.pati.mydropboxapplication;
 /**
  * Created by Pati on 22.02.2017.
  */
-import com.dropbox.core.DbxHost;
+
 import com.dropbox.core.DbxRequestConfig;
 import com.dropbox.core.http.OkHttp3Requestor;
 import com.dropbox.core.v2.DbxClientV2;

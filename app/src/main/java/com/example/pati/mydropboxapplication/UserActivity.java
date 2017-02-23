@@ -47,6 +47,15 @@ public class UserActivity extends DropboxActivity {
                 startActivity(FilesActivity.getIntent(UserActivity.this, ""));
             }
         });
+
+        Button logoutButton = (Button) findViewById(R.id.logout_button);
+
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Auth.startOAuth2Authentication(UserActivity.this, getString(R.string.app_key));
+            }
+        });
     }
 
     @Override
@@ -61,6 +70,7 @@ public class UserActivity extends DropboxActivity {
             findViewById(R.id.name_text).setVisibility(View.VISIBLE);
             //findViewById(R.id.type_text).setVisibility(View.VISIBLE);
             findViewById(R.id.files_button).setEnabled(true);
+            findViewById(R.id.logout_button).setEnabled(true);
         } else {
             findViewById(R.id.imageView).setVisibility(View.GONE);
             findViewById(R.id.login_button).setVisibility(View.VISIBLE);
@@ -69,6 +79,7 @@ public class UserActivity extends DropboxActivity {
             findViewById(R.id.name_text).setVisibility(View.GONE);
             //findViewById(R.id.type_text).setVisibility(View.GONE);
             findViewById(R.id.files_button).setEnabled(false);
+            //findViewById(R.id.logout_button).setEnabled(false);
         }
     }
 
