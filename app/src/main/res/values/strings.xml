@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">Dropbox Android Example</string>
+    <string name="app_name">Pati Dropbox Android Example</string>
     <!-- Change this to your app key -->
     <string name="app_key">rrqjp8g4ct7ylru</string>
-    <string name="title_activity_files">Files</string>
+    <string name="title_activity_files">Your Files</string>
+    <string name="view_files">View Files</string>
+    <string name="login_with_dropbox">Login with Dropbox</string>
+    <string name="hello_text">Welcome to Dropbox</string>
+
 </resources>
