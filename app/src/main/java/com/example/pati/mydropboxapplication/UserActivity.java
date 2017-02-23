@@ -9,11 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dropbox.core.android.Auth;
 import com.dropbox.core.v2.users.FullAccount;
 import com.example.pati.mydropboxapplication.R;
+import com.squareup.picasso.Picasso;
 
 
 /**
@@ -53,12 +55,14 @@ public class UserActivity extends DropboxActivity {
         super.onResume();
 
         if (hasToken()) {
+            findViewById(R.id.imageView).setVisibility(View.VISIBLE);
             findViewById(R.id.login_button).setVisibility(View.GONE);
             findViewById(R.id.email_text).setVisibility(View.VISIBLE);
             findViewById(R.id.name_text).setVisibility(View.VISIBLE);
             //findViewById(R.id.type_text).setVisibility(View.VISIBLE);
             findViewById(R.id.files_button).setEnabled(true);
         } else {
+            //findViewById(R.id.imageView).setVisibility(View.GONE);
             findViewById(R.id.login_button).setVisibility(View.VISIBLE);
             findViewById(R.id.email_text).setVisibility(View.GONE);
             findViewById(R.id.name_text).setVisibility(View.GONE);
@@ -72,9 +76,16 @@ public class UserActivity extends DropboxActivity {
         new GetCurrentAccountTask(DropboxClientFactory.getClient(), new GetCurrentAccountTask.Callback() {
             @Override
             public void onComplete(FullAccount result) {
+                //ImageView profile = (ImageView) findViewById(R.id.imageView);
                 ((TextView) findViewById(R.id.email_text)).setText(result.getEmail());
                 ((TextView) findViewById(R.id.name_text)).setText(result.getName().getDisplayName());
                 //((TextView) findViewById(R.id.type_text)).setText(result.getAccountType().name());
+                //((ImageView) findViewById(R.id.imageView).);
+//
+//                Picasso.with(UserActivity.this)
+//                        .load(result.getProfilePhotoUrl())
+//                        .resize(200, 200)
+//                        .into(profile);
             }
 
             @Override

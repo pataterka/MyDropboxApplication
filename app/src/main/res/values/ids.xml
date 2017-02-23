@@ -3,4 +3,5 @@
     <item name="login_button" type="id" />
     <item name="toolbar" type="id">toolbar</item>
     <item name="app_bar" type="id" />
+    <item name="imageView" type="id" />
 </resources>
